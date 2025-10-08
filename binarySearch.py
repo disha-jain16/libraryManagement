@@ -10,8 +10,25 @@ def binary_search(arr, target):
             right = mid - 1
     return -1
 
-# Example usage:
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-target = 7
-result = binary_search(arr, target)
-print("Element found at index:", result if result != -1 else "Not found")
+
+def main():
+    # Take user input for the array
+    arr = list(map(int, input("Enter sorted elements separated by spaces: ").split()))
+
+    # Take input for the element to search
+    target = int(input("Enter the element to search: "))
+
+    # Perform binary search
+    result = binary_search(arr, target)
+
+    # Display result
+    if result != -1:
+        print(f"Element found at index {result}")
+    else:
+        print("Element not found in the array.")
+
+
+# Entry point of the program
+if __name__ == "__main__":
+    main()
+
